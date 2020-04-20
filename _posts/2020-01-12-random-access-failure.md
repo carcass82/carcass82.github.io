@@ -1,10 +1,15 @@
 ---
-layout: post
 title: "Random Access Failure"
-tags: [rants, ram, linux, windows]
+tags:
+  - rants
+  - ram
+  - linux
+  - windows
 ---
 
 Everything started with random reboots.
+
+<!-- more -->
 
 I've been using my [laptop](https://www.notebookcheck.net/Acer-Aspire-5930G.10263.0.html) for more than ten years so i was quite expecting that the hardware would start failing at some point.
 
@@ -30,7 +35,7 @@ So I modified kernel parameters and added `memmap=64K\$0x39200000`.
 
 After rebooting a `dmesg | grep 39200000` shows that the kernel is doing what I wanted:
 
-    [    0.000000] user: [mem 0x0000000039200000-0x000000003920ffff] reserved
+    user: [mem 0x0000000039200000-0x000000003920ffff] reserved
 
 
 _Note that if you're using GRUB2 and your distribution has some flavour of `grub-mkconfig` which generates `grub.cfg` from a configuration file you have to add the option there as `64K\\\$0x3920a87c` (both the backslash and the dollar symbol must be escaped)._

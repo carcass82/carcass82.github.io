@@ -19,33 +19,94 @@
 # in the templates via {{ site.myvariable }}.
 
 # Basics
+locale: "en-US"
+timezone: Europe/Rome
+
 title: Coder Notes
+subtitle: "A useless and unstructured collection of random notes, code and rants"
+description: # let me think about it
+
+name: "Carlo Casta"
 email: carlo.casta@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  A useless and unstructured collection of random notes, code and rants.
-baseurl: "" # the subpath of your site, e.g. /blog
+
 url: "https://carcass82.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: "<!-- more -->"
 
-show_excerpts: false # set to true to show excerpts on the homepage
+twitter:
+  username: carcass_82
 
-header_pages:
-  - about.md
+github:
+  username: carcass82
 
-# social links
-twitter_username: carcass_82
-github_username:  carcass82
+analytics:
+  provider: "google"
+  google:
+    tracking_id: UA-156246734-1
 
-# google / disqus integration
-google_analytics: UA-156246734-1
-disqus:
-  shortname: codernotes-github
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: codernotes-github
+    
+atom_feed:
+  path:
+  
+author:
+  name: "Carlo Casta"
+  avatar: "/img/avatar.jpg"
+  bio: _Your friendly gfx programmer._
+  location: "Milan, Italy"
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/carcass_82"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/carcass82"
+    - label: "email"
+      icon: "fas fa-fw fa-at"
+      url: "mailto:carlo.casta@gmail.com"
 
-# Build settings
-theme: minima
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/carcass_82"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/carcass82"
+
+# theme settings
+#theme: minima
+remote_theme: "mmistakes/minimal-mistakes@4.19.1"
+minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      comments: true
+      share: true
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-paginate
+
+tag_archive:
+  type: liquid
+  path: /tags/
+
+include:
+  - _pages
 
 # Exclude from processing.
 # The following items will not be processed, by default.

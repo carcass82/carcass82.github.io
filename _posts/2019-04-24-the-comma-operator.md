@@ -1,13 +1,15 @@
 ---
-layout: post
 title: "The Comma Operator"
-tags: [rants, c, c++]
+tags:
+  - rants
+  - c
+  - c++
 ---
 
-It's easy to get _lost in parentheses_ when you have _complex_ functions that takes a lot of input parameters, like a `foo` function which takes an object which based on some condition will be scaled by some factor and will be appended to a processing list based on some other operation depending on its visibility:
+It's easy to get _lost in parentheses_ <!-- more --> when you have _complex_ functions that takes a lot of input parameters, like a `foo` function which takes an object which based on some condition will be scaled by some factor and will be appended to a processing list based on some other operation depending on its visibility:
 
 ```c++
-bool foo(Object* object, float scale_factor, bool append_to_list = true);
+bool foo(Object* object, float scale, bool append_to_list = true);
 ```
 
 You may end up with code like this, where you want to execute some code depending on the result of `foo`:
