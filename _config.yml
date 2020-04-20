@@ -18,16 +18,26 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+# Basics
 title: Coder Notes
 email: carlo.casta@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A useless and unstructured collection of random notes, code and rants.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://carcass82.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+
+
+show_excerpts: false # set to true to show excerpts on the homepage
+
+header_pages:
+  - about.md
+
+# social links
 twitter_username: carcass_82
 github_username:  carcass82
-google_analytics: UA-156246734-1
 
+# google / disqus integration
+google_analytics: UA-156246734-1
 disqus:
   shortname: codernotes-github
 
@@ -35,6 +45,7 @@ disqus:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
