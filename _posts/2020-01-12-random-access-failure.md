@@ -1,10 +1,9 @@
 ---
 title: "Random Access Failure"
 tags:
-  - rants
-  - ram
-  - linux
-  - windows
+  - Rants
+  - Linux
+  - Windows
 ---
 
 Everything started with random reboots.

@@ -87,6 +87,7 @@ defaults:
       author_profile: true
       comments: true
       share: true
+      hasmath: false
 
 plugins:
   - jekyll-feed

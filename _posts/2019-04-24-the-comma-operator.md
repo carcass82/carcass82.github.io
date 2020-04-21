@@ -1,9 +1,9 @@
 ---
 title: "The Comma Operator"
 tags:
-  - rants
-  - c
-  - c++
+  - Rants
+  - C
+  - C++
 ---
 
 It's easy to get _lost in parentheses_ <!-- more --> when you have _complex_ functions that takes a lot of input parameters, like a `foo` function which takes an object which based on some condition will be scaled by some factor and will be appended to a processing list based on some other operation depending on its visibility:
